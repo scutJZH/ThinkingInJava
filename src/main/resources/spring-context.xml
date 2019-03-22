@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+    <context:annotation-config/>
+    <context:component-scan base-package="configuration" />
+
+
+    <!--
+    Freemarker 配置：
+    templateLoaderPath: 模板所在路径
+    freemarkerVariables：能在模板中使用的常量
+   -->
+    <!--<bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">-->
+        <!--<property name="templateLoaderPath" value="/META-INF/views"/>-->
+        <!--<property name="freemarkerSettings">-->
+            <!--<props>-->
+                <!--<prop key="defaultEncoding">utf-8</prop>-->
+                <!--<prop key="locale">zh_CN</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+        <!--<property name="freemarkerVariables">-->
+            <!--<map>-->
+                <!--<entry key="dev" value="true"/>-->
+                <!--<entry key="reqsuffix" value="jsps"/>-->
+            <!--</map>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!-- Freemarker视图Resolver配置： -->
+    <!--<bean name="FreeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">-->
+        <!--<property name="suffix" value=".ftl"/>-->
+        <!--<property name="contentType" value="text/html;charset=UTF-8"/>-->
+        <!--<property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView" />-->
+    <!--</bean>-->
+
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<property name="prefix" value="/META-INF/views/" />-->
+        <!--<property name="suffix" value=".jsp" />-->
+        <!--<property name="exposeContextBeansAsAttributes" value="true" />-->
+    <!--</bean>-->
+
+
+
+</beans>
